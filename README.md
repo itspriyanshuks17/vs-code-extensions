@@ -1,65 +1,27 @@
-# math-extension README
+# Math Extension
 
-This is the README for your extension "math-extension". After writing up a brief description, we recommend including the following sections.
+A lightweight mathematics toolkit for Visual Studio Code. Run common calculations from the Command Palette without leaving your editor.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- Calculate arithmetic expressions.
+- Add, subtract, multiply, or divide comma-separated numbers.
+- Calculate powers, square roots, percentages, and averages.
 
-For example if there is an image subfolder under your extension project workspace:
+## Use
 
-\!\[feature X\]\(images/feature-x.png\)
+1. Open the Command Palette with `Ctrl+Shift+P` (`Cmd+Shift+P` on macOS).
+2. Run a command beginning with `Math:`.
+3. Enter the requested number or expression.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+For example, run **Math: Add** and enter `10, 20, 30` to get `Result: 60`.
 
-## Requirements
+## Install From a VSIX
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+1. Build the package in the extension project with `npm run package`.
+2. In VS Code, open **Extensions**, select the `...` menu, then choose **Install from VSIX...**.
+3. Select the generated `math-extension-0.0.1.vsix` file and reload VS Code if prompted.
 
-## Extension Settings
+## Known Limitation
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+**Math: Calculate** currently evaluates expressions as JavaScript. Use it only with expressions you trust. A dedicated math expression parser is needed before this command is suitable for untrusted input.

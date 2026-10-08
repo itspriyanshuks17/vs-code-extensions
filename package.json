@@ -1,0 +1,81 @@
+{
+  "name": "math-extension",
+  "displayName": "Math Extension",
+  "description": "Calculate expressions and perform common math operations from the Command Palette.",
+  "publisher": "local-math-extension",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/itspriyanshuks17/vs-code-extensions",
+    "directory": "math-extension"
+  },
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.140.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "math-extension.calculate",
+        "title": "Math: Calculate"
+      },
+      {
+        "command": "math-extension.add",
+        "title": "Math: Add"
+      },
+      {
+        "command": "math-extension.subtract",
+        "title": "Math: Subtract"
+      },
+      {
+        "command": "math-extension.multiply",
+        "title": "Math: Multiply"
+      },
+      {
+        "command": "math-extension.divide",
+        "title": "Math: Divide"
+      },
+      {
+        "command": "math-extension.power",
+        "title": "Math: Power"
+      },
+      {
+        "command": "math-extension.squareRoot",
+        "title": "Math: Square Root"
+      },
+      {
+        "command": "math-extension.percentage",
+        "title": "Math: Percentage"
+      },
+      {
+        "command": "math-extension.average",
+        "title": "Math: Average"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint extension.js test",
+    "pretest": "npm run lint",
+    "test": "vscode-test",
+    "vscode:prepublish": "npm run lint",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "24.x",
+    "@types/vscode": "^1.140.0",
+    "@vscode/test-cli": "^0.0.15",
+    "@vscode/test-electron": "^3.0.0",
+    "@vscode/vsce": "^3.6.2",
+    "eslint": "^10.5.0",
+    "globals": "^17.13.0"
+  },
+  "overrides": {
+    "diff": "^8.0.4",
+    "serialize-javascript": "^7.0.6"
+  }
+}
